@@ -7,16 +7,16 @@ import {
 import { GlowingEffect } from './ui/GlowingEffect';
 
 const brands = [
-  { id: 1, name: '像素蛋糕', icon: FileText, color: 'text-blue-500', link: 'https://www.pixcakeai.com/' },
-  { id: 2, name: '像素蛋糕移动端', icon: MessageCircle, color: 'text-white', link: 'https://www.pixcakeai.com/' },
-  { id: 3, name: '像素苏打', icon: Crown, color: 'text-red-500', link: 'https://www.pixcakeai.com/' },
-  { id: 4, name: '像素曲奇', icon: Star, color: 'text-yellow-400', link: 'https://www.pixcakeai.com/' },
-  { id: 5, name: '像素芝士', icon: Video, color: 'text-pink-500', link: 'https://www.pixcakeai.com/' },
-  { id: 6, name: '像素吐司', icon: Gamepad2, color: 'text-amber-500', link: 'https://www.pixcakeai.com/' },
-  { id: 7, name: 'Evoto', icon: Camera, color: 'text-rose-500', link: 'https://www.pixcakeai.com/' },
-  { id: 8, name: 'Evoto移动端', icon: Cloud, color: 'text-sky-500', link: 'https://www.pixcakeai.com/' },
-  { id: 9, name: 'E-Video', icon: ScanFace, color: 'text-emerald-500', link: 'https://www.pixcakeai.com/' },
-  { id: 10, name: 'Evoto Instant', icon: Radio, color: 'text-slate-200', link: 'https://www.pixcakeai.com/' },
+  { id: 1, name: '像素蛋糕', icon: FileText, color: 'text-blue-500', link: 'https://www.pixcakeai.com/', image: '/images/brands/pixcake.png' },
+  { id: 2, name: '像素蛋糕移动端', icon: MessageCircle, color: 'text-white', link: 'https://www.pixcakeai.com/', image: '/images/brands/pixcake-mobile.png' },
+  { id: 3, name: '像素苏打', icon: Crown, color: 'text-red-500', link: 'https://www.pixcakeai.com/', image: '/images/brands/pixsoda.png' },
+  { id: 4, name: '像素曲奇', icon: Star, color: 'text-yellow-400', link: 'https://www.pixcakeai.com/', image: '/images/brands/pixcookie.png' },
+  { id: 5, name: '像素芝士', icon: Video, color: 'text-pink-500', link: 'https://www.pixcakeai.com/', image: '/images/brands/pixcheese.png' },
+  { id: 6, name: '像素吐司', icon: Gamepad2, color: 'text-amber-500', link: 'https://www.pixcakeai.com/', image: '/images/brands/pixtoast.png' },
+  { id: 7, name: 'Evoto', icon: Camera, color: 'text-rose-500', link: 'https://www.pixcakeai.com/', image: '/images/brands/evoto.png' },
+  { id: 8, name: 'Evoto移动端', icon: Cloud, color: 'text-sky-500', link: 'https://www.pixcakeai.com/', image: '/images/brands/evoto-mobile.png' },
+  { id: 9, name: 'E-Video', icon: ScanFace, color: 'text-emerald-500', link: 'https://www.pixcakeai.com/', image: '/images/brands/e-video.png' },
+  { id: 10, name: 'Evoto Instant', icon: Radio, color: 'text-slate-200', link: 'https://www.pixcakeai.com/', image: '/images/brands/evoto-instant.png' },
 ];
 
 const Services: React.FC = () => {
@@ -53,8 +53,18 @@ const Services: React.FC = () => {
                 borderWidth={3}
               />
               <div className="relative flex h-full flex-col items-center justify-center gap-4 rounded-3xl bg-wow-black/80 p-8 shadow-sm overflow-hidden aspect-square transition-colors group-hover:bg-white/[0.03]">
-                <div className="p-4 rounded-2xl bg-white/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-white/10">
-                  <item.icon size={36} className={`transition-colors duration-300 ${item.color}`} strokeWidth={1.5} />
+                <div className="w-20 h-20 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                  {item.image ? (
+                    <img 
+                      src={item.image} 
+                      alt={item.name}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <div className="p-4 rounded-2xl bg-white/5 transition-all duration-300 group-hover:bg-white/10">
+                      <item.icon size={36} className={`transition-colors duration-300 ${item.color}`} strokeWidth={1.5} />
+                    </div>
+                  )}
                 </div>
                 
                 <span className="text-base font-medium text-gray-400 text-center transition-colors duration-300 group-hover:text-white">

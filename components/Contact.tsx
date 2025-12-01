@@ -10,10 +10,10 @@ const Contact: React.FC = () => {
           <div>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">准备好开始了吗？</h2>
             <a 
-              href="mailto:hello@wowdesign.studio" 
+              href="mailto:wowdesign@pixcakeai.com" 
               className="text-4xl md:text-6xl lg:text-7xl font-bold hover:text-gray-300 transition-colors tracking-tight underline decoration-1 decoration-gray-700 underline-offset-8"
             >
-              hello@wow.design
+              wowdesign@pixcakeai.com
             </a>
           </div>
 
@@ -21,11 +21,11 @@ const Contact: React.FC = () => {
             <div className="flex flex-col items-center md:items-start space-y-4">
               <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin size={20} />
-                <span>上海市静安区南京西路1266号恒隆广场</span>
+                <span>厦门市思明区特房波特曼A座</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail size={20} />
-                <span>career@wow.design (求职)</span>
+                <span>glby@truesightai.com（求职）</span>
               </div>
             </div>
 

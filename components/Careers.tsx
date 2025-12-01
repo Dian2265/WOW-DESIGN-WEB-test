@@ -37,31 +37,12 @@ const Careers: React.FC = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-4">
-          {jobs.map((job) => (
-            <div 
-              key={job.id}
-              className="group bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center transition-all duration-300"
-            >
-              <div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-red-400 group-hover:via-yellow-400 group-hover:to-blue-400 transition-colors duration-300">{job.title}</h3>
-                <div className="flex space-x-4 text-sm text-gray-400">
-                  <span>{job.department}</span>
-                  <span>•</span>
-                  <span>{job.location}</span>
-                </div>
-              </div>
-              
-              <div className="mt-4 md:mt-0 flex items-center space-x-4 w-full md:w-auto justify-between md:justify-end">
-                <span className="px-3 py-1 rounded-full text-xs font-medium border border-white/20 text-gray-300">
-                  {job.type}
-                </span>
-                <button className="text-sm font-semibold hover:underline underline-offset-4 decoration-pink-500">
-                  查看详情 &rarr;
-                </button>
-              </div>
-            </div>
-          ))}
+        <div className="flex justify-center">
+          <img 
+            src="/images/careers-team.jpg" 
+            alt="加入我们的团队" 
+            className="rounded-2xl w-full max-w-5xl object-cover shadow-2xl"
+          />
         </div>
       </div>
     </section>
